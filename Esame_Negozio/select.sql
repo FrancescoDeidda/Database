@@ -23,5 +23,5 @@ select * from negozio.prodotto where codiceP in
 
 -- e) Selezionare il codice delle coppie di prodotti che sono venduti dalla stessa vetrina
 
-select * from negozio.presenza as p1 join
+select p1.prodotto as prodotto1, p2.prodotto as prodotto2 from negozio.presenza as p1 join
 negozio.presenza as p2 on p1.prodotto < p2.prodotto and p1.vetrina = p2.vetrina;
